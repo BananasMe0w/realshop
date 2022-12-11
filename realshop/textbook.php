@@ -52,14 +52,14 @@
               </a>
             <?php }else{ ?>
               <?php if($_SESSION['sess_status']==1){ ?>
-                <a href="cart_script.php?product_id=<?php echo $row['product_id'] ?>,product_genre=<?php echo $row['product_genre']; ?>">
+                <a href="cart_script.php?product_id=<?php echo $row['product_id'] ?>">
                   <button class="btn btn-success" type="button">เพิ่มลงตะกร้า</button>
                 </a>
                 <a href="review.php?product_id=<?php echo $row['product_id'] ?>">
                   <button class="btn btn-warning rounded-circle" type="button">รีวิว</button>
                 </a>
               <?php }else{ ?>
-                <a href="cart_script.php?product_id=<?php echo $row['product_id'] ?>,product_genre=<?php echo $row['product_genre']; ?>">
+                <a href="cart_script.php?product_id=<?php echo $row['product_id'] ?>">
                   <button class="btn btn-success" type="button" disabled>เพิ่มลงตะกร้า</button>
                 </a>
                 <a href="review.php?product_id=<?php echo $row['product_id'] ?>">

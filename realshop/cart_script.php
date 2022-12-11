@@ -2,7 +2,6 @@
   include "connect.php";
 
   $id = $_GET['product_id'];
-  $genre = $_GET['product_genre'];
   $user_id = $_SESSION['sess_id'];
 
   $sql = "SELECT * FROM tbl_bill WHERE product_id='$id' AND user_id='$user_id'";
