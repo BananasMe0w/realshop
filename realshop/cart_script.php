@@ -18,7 +18,7 @@
     echo "
     <script type='text/javascript'>
       alert('เพิ่มลงตะกร้าแล้ว');
-      location='index.php';
+      history.go(-1);
     </script>
     ";
   }else {
@@ -28,7 +28,7 @@
     echo "
     <script type='text/javascript'>
       alert('ลงตะกร้าแล้ว');
-      location='index.php';
+      history.go(-1);
     </script>
     ";
   }
