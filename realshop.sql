@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 11, 2022 at 05:39 AM
+-- Generation Time: Dec 11, 2022 at 06:25 AM
 -- Server version: 5.7.12-log
 -- PHP Version: 5.6.21
 
@@ -90,23 +90,16 @@ CREATE TABLE `tbl_review` (
   `review_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `review_info` text NOT NULL
+  `review_info` text NOT NULL,
+  `review_score` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_review`
 --
 
-INSERT INTO `tbl_review` (`review_id`, `user_id`, `product_id`, `review_info`) VALUES
-(15, 1, 4, '151515'),
-(16, 1, 4, 'wasd'),
-(17, 1, 4, 'wasdwa'),
-(18, 1, 4, 'awdasdacwacaw'),
-(19, 1, 4, 'awdasdacwacaw'),
-(20, 1, 4, 'wasdwadw'),
-(21, 1, 4, 'wasdwadw'),
-(22, 1, 4, 'wasdwadwawda'),
-(23, 1, 4, 'wasdwawdw');
+INSERT INTO `tbl_review` (`review_id`, `user_id`, `product_id`, `review_info`, `review_score`) VALUES
+(24, 1, 6, 'how old are you?', 'เฉยๆ');
 
 -- --------------------------------------------------------
 
@@ -130,8 +123,8 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `name`, `surname`, `address`, `tel`, `email`, `password`, `status`) VALUES
-(1, 'user', 'surname', 'UNKNOWN', '0000000000', 'user@gmail.com', 'user', 1),
-(2, 'wasd', 'wasd', 'wasd', 'wasd', 'nawaphonkit@gmail.com', 'ไฟหก', 1);
+(1, 'admin', 'wasd', 'wasd', 'wasd', 'admin@gmail.com', 'admin', 2),
+(2, 'user', 'surname', 'UNKNOWN', '0000000000', 'user@gmail.com', 'user', 1);
 
 --
 -- Indexes for dumped tables
@@ -179,7 +172,7 @@ ALTER TABLE `tbl_product`
 -- AUTO_INCREMENT for table `tbl_review`
 --
 ALTER TABLE `tbl_review`
-  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT for table `tbl_user`
 --
