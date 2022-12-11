@@ -11,11 +11,15 @@
       <h3 class="text-center">cartoon</h3>
     <hr>
     <div class="container mt-3">
+      <?php
+        if($_SESSION['sess_status']==2){
+      ?>
       <div align="right">
         <a href="insert.php?product_id=<?php echo $row['product_id'] ?>">
           <button class="btn btn-outline-success" type="button">insert</button>
         </a>
       </div>
+      <?php } ?>
       <div class="row">
         <?php
           include "connect.php";

@@ -1,8 +1,8 @@
 <?php
   $host = "localhost";
-  $user = "root";
-  $pw = "meowmeow";
-  $db = "realshop";
+  $user = "thncom";
+  $pw = "thn1234";
+  $db = "thncom";
 
   $con = new mysqli($host, $user, $pw, $db);
   session_start();
