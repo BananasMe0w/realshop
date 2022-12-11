@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 10, 2022 at 08:18 AM
+-- Generation Time: Dec 11, 2022 at 05:39 AM
 -- Server version: 5.7.12-log
 -- PHP Version: 5.6.21
 
@@ -83,6 +83,34 @@ INSERT INTO `tbl_product` (`product_id`, `product_name`, `product_genre`, `produ
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_review`
+--
+
+CREATE TABLE `tbl_review` (
+  `review_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `review_info` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_review`
+--
+
+INSERT INTO `tbl_review` (`review_id`, `user_id`, `product_id`, `review_info`) VALUES
+(15, 1, 4, '151515'),
+(16, 1, 4, 'wasd'),
+(17, 1, 4, 'wasdwa'),
+(18, 1, 4, 'awdasdacwacaw'),
+(19, 1, 4, 'awdasdacwacaw'),
+(20, 1, 4, 'wasdwadw'),
+(21, 1, 4, 'wasdwadw'),
+(22, 1, 4, 'wasdwadwawda'),
+(23, 1, 4, 'wasdwawdw');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_user`
 --
 
@@ -102,7 +130,8 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `name`, `surname`, `address`, `tel`, `email`, `password`, `status`) VALUES
-(1, 'user', 'surname', 'UNKNOWN', '0000000000', 'user@gmail.com', 'user', 1);
+(1, 'user', 'surname', 'UNKNOWN', '0000000000', 'user@gmail.com', 'user', 1),
+(2, 'wasd', 'wasd', 'wasd', 'wasd', 'nawaphonkit@gmail.com', 'ไฟหก', 1);
 
 --
 -- Indexes for dumped tables
@@ -121,6 +150,12 @@ ALTER TABLE `tbl_product`
   ADD PRIMARY KEY (`product_id`);
 
 --
+-- Indexes for table `tbl_review`
+--
+ALTER TABLE `tbl_review`
+  ADD PRIMARY KEY (`review_id`);
+
+--
 -- Indexes for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
@@ -134,17 +169,22 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_bill`
 --
 ALTER TABLE `tbl_bill`
-  MODIFY `bill_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `bill_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tbl_product`
 --
 ALTER TABLE `tbl_product`
   MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 --
+-- AUTO_INCREMENT for table `tbl_review`
+--
+ALTER TABLE `tbl_review`
+  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+--
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
